@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#173b2d">
+  <title>KakoBuy spreadsheet | CAFANS Finds, Sizing &amp; QC</title>
+  <meta name="description" content="Browse KakoBuy spreadsheet finds from CAFANS, compare estimated USD item prices, and use practical sizing, warehouse QC and shipping checks before ordering.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KakoBuy spreadsheet | CAFANS Finds, Sizing &amp; QC">
+  <meta property="og:description" content="Filter CAFANS finds by category, compare item prices and plan your order with sizing, QC and shipping checks.">
+  <!-- Save as index.html. Google and Bing submission is pending a public URL and access to the verified site properties. After deployment, add the final self-referencing canonical URL, then submit it through Google Search Console URL Inspection and Bing Webmaster Tools URL Submission. -->
+  <!-- Search review used available results for KakoBuy spreadsheet. Exact Google first-page positions were not verified.
+       Reviewed https://spreadsheetkakobuy.com/ for category navigation,
+       https://spreadsheet-kakobuy.com/ for listing checks and delivery quotes,
+       https://rep.tools/guides/kakobuy-spreadsheet for warehouse QC guidance,
+       and https://kakofind.net/spreadsheet/buty?lang=en for shoe sizing and QC coverage.
+       This page pairs each catalog row with a category-specific inspection check and lets readers compare two shipping quotes on the same parcel. -->
+  <style>
+    :root{color-scheme:light;--ink:#17372a;--muted:#52685c;--paper:#f4f5ec;--white:#fff;--line:#d7e0d4;--green:#173b2d;--lime:#e1f593}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+    a{color:inherit;text-underline-offset:.2em}
+    button,input,select{font:inherit}
+    :focus-visible{outline:3px solid #426f36;outline-offset:4px}
+    .wrap{width:min(1120px,calc(100% - 32px));margin-inline:auto}
+    .skip{position:absolute;left:1rem;top:-5rem;background:#fff;padding:.5rem}
+    .skip:focus{top:1rem;z-index:2}
+    header{background:var(--green);color:#fff}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:18px 0;border-bottom:1px solid #ffffff36}
+    nav a{margin-right:12px}
+    nav .brand{font-weight:850;letter-spacing:.11em;text-decoration:none}
+    .hero{padding:clamp(56px,10vw,114px) 0;text-align:center}
+    h1,h2,h3,p{margin:0 0 .75em}
+    h1,h2,h3{line-height:1.1}
+    h1{font-size:clamp(2.75rem,8vw,6.6rem);letter-spacing:-.075em;margin-bottom:.24em}
+    h2{font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-.045em;margin-bottom:.35em}
+    h3{font-size:1.15rem}
+    .hero p{max-width:55ch;margin:0 auto 24px;color:#e1eddf}
+    .actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .cta{display:inline-block;background:var(--lime);color:var(--green);font-weight:750;padding:11px 20px;border-radius:8px;text-decoration:none;border:1px solid var(--lime)}
+    .cta.secondary{background:transparent;color:#fff;border-color:#ffffff80}
+    header a:focus-visible{outline-color:var(--lime)}
+    section{margin-block:clamp(34px,6vw,68px);scroll-margin-top:20px}
+    .intro{display:grid;grid-template-columns:1fr 1.3fr;gap:28px;align-items:start}
+    .panel{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:clamp(16px,4vw,32px)}
+    .toolbar,.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+    label{display:block;font-weight:650}
+    input,select{width:100%;min-height:44px;padding:8px 10px;border:1px solid #82998b;border-radius:6px;background:#fff;color:var(--ink)}
+    .muted{color:var(--muted)}
+    .table-scroll{overflow-x:auto}
+    table{width:100%;min-width:590px;border-collapse:collapse}
+    caption{text-align:left;color:var(--muted);padding-bottom:12px}
+    th,td{text-align:left;vertical-align:top;padding:12px;border-bottom:1px solid var(--line)}
+    thead th{background:#eaf0e6}
+    td:nth-child(3){white-space:nowrap;font-variant-numeric:tabular-nums}
+    .guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
+    .guide-grid p{margin-bottom:0}
+    details{padding:13px 0;border-bottom:1px solid var(--line)}
+    summary{cursor:pointer;font-weight:750}
+    details p{margin:8px 0 0}
+    output{display:block;padding:12px;background:#eaf0e6;border-radius:6px;font-weight:700}
+    footer{padding:24px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+    footer p{margin:0}
+    @media(max-width:680px){.intro,.guide-grid{grid-template-columns:1fr}nav{justify-content:center}.fields{grid-template-columns:1fr}}
+    @media(max-width:400px){.toolbar{grid-template-columns:1fr}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"KakoBuy spreadsheet",
+    "inLanguage":"en",
+    "description":"An independent shopping guide with selected CAFANS listings, estimated item prices, category-specific quality checks and a shipping quote comparison.",
+    "about":[{"@type":"Thing","name":"Shopping agent product comparison"},{"@type":"Thing","name":"Warehouse quality control"}],
+    "mainEntity":{
+      "@type":"ItemList",
+      "name":"Selected CAFANS catalog listings",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Leather Slides","url":"https://cafans.com/goods-158791.html"},
+        {"@type":"ListItem","position":2,"name":"Platform Slides","url":"https://cafans.com/goods-158790.html"},
+        {"@type":"ListItem","position":3,"name":"Sweatshirt","url":"https://cafans.com/goods-158792.html"},
+        {"@type":"ListItem","position":4,"name":"Unisex Embroidered Oversized T-Shirt","url":"https://cafans.com/goods-158200.html"},
+        {"@type":"ListItem","position":5,"name":"Corteiz Jacket","url":"https://cafans.com/goods-158279.html"}
+      ]
+    }
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/lofnz/">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="wrap">
+      <nav aria-label="Page navigation">
+        <a class="brand" href="https://cafans.com">CAFANS</a>
+        <div><a href="#catalog">Catalog</a><a href="#checks">Sizing &amp; QC</a><a href="#shipping">Shipping</a><a href="#faq">FAQ</a></div>
+      </nav>
+      <div class="hero">
+        <h1>KakoBuy spreadsheet</h1>
+        <p>Compare shoes and streetwear from the CAFANS catalog, then check sizing, warehouse photos and shipping costs before you order.</p>
+        <div class="actions">
+          <a class="cta" href="https://cafans.com">KakoBuy spreadsheet</a>
+          <a class="cta secondary" href="https://cafans.com">Buy it now</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap" id="main">
+    <section class="intro" aria-labelledby="start-title">
+      <h2 id="start-title">From a listing to a shortlist</h2>
+      <div>
+        <p>A KakoBuy spreadsheet brings product links and comparison details together. Start with a style and size, open its CAFANS listing, and use the buying options on that listing to see which shopping agents are available.</p>
+        <p>Before paying, save the original seller link, exact variant, size chart and return window. If two listings use similar photos, compare the measurements and variant names before choosing.</p>
+      </div>
+    </section>
+    <section class="panel" id="catalog" aria-labelledby="catalog-title">
+      <h2 id="catalog-title">CAFANS product catalog</h2>
+      <p class="muted">These estimated item prices come from the CAFANS homepage. Open the listing to confirm the current price, options and availability. Shipping and other charges are separate.</p>
+      <div class="toolbar" id="filters" hidden>
+        <label>Search products<input type="search" id="query" placeholder="Try slides or jacket"></label>
+        <label>Category<select id="category">
+          <option value="">All categories</option>
+          <option value="shoes">Shoes</option>
+          <option value="sweatshirts">Sweatshirts</option>
+          <option value="tees">T-shirts</option>
+          <option value="jackets">Jackets</option>
+        </select></label>
+      </div>
+      <p id="count" role="status" class="muted"></p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable product comparison">
+        <table>
+          <caption>Selected CAFANS listings and what to check for each item</caption>
+          <thead>
+            <tr><th scope="col">Product</th><th scope="col">Category</th><th scope="col">Est. USD</th><th scope="col">What to check</th></tr>
+          </thead>
+          <tbody id="products">
+            <tr data-category="shoes"><th scope="row"><a href="https://cafans.com/goods-158791.html">Leather Slides</a></th><td>Shoes</td><td>$62.36</td><td>Ask for an insole measurement and a photo of the size label.</td></tr>
+            <tr data-category="shoes"><th scope="row"><a href="https://cafans.com/goods-158790.html">Platform Slides</a></th><td>Shoes</td><td>$46.67</td><td>Check sole thickness and heel height from a side photo.</td></tr>
+            <tr data-category="sweatshirts"><th scope="row"><a href="https://cafans.com/goods-158792.html">Sweatshirt</a></th><td>Sweatshirts</td><td>$27.50</td><td>Compare flat chest width and sleeve length with a sweatshirt you own.</td></tr>
+            <tr data-category="tees"><th scope="row"><a href="https://cafans.com/goods-158200.html">Unisex Embroidered Oversized T-Shirt</a></th><td>T-shirts</td><td>$32.64</td><td>Check shoulder width and ask for a close-up of the embroidery.</td></tr>
+            <tr data-category="jackets"><th scope="row"><a href="https://cafans.com/goods-158279.html">Corteiz Jacket</a></th><td>Jackets</td><td>$42.78</td><td>Review zipper alignment and leave room for the layers you plan to wear.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section id="checks" aria-labelledby="checks-title">
+      <h2 id="checks-title">Sizing and warehouse QC</h2>
+      <div class="guide-grid">
+        <article class="panel">
+          <h3>Measure a garment you already wear</h3>
+          <p>Lay it flat and measure across the chest, from shoulder to shoulder, and from shoulder to hem. Check whether the listing uses flat width or full circumference before comparing numbers.</p>
+        </article>
+        <article class="panel">
+          <h3>Match photos to the exact variant</h3>
+          <p>Compare the warehouse quality-control photos with your saved color and size. Request a close-up of any part that affects your decision, such as a size label, seam or zipper.</p>
+        </article>
+        <article class="panel">
+          <h3>Check the exchange window</h3>
+          <p>If a measurement or variant is wrong, review the seller and agent’s return terms while the item is still at the warehouse. Confirm any return shipping charge before deciding.</p>
+        </article>
+      </div>
+    </section>
+    <section class="panel" id="shipping" aria-labelledby="shipping-title">
+      <h2 id="shipping-title">Compare two shipping quotes</h2>
+      <p>Ask for the packed box dimensions and weight. Quote both lines for the same parcel, destination and currency. Check whether each line charges by actual weight or dimensional weight and whether the quotes include the same services.</p>
+      <form id="comparison" hidden>
+        <div class="fields">
+          <label>Shipping line A (USD)<input type="number" id="quote-a" min="0" step="0.01" inputmode="decimal"></label>
+          <label>Shipping line B (USD)<input type="number" id="quote-b" min="0" step="0.01" inputmode="decimal"></label>
+        </div>
+        <output id="difference" for="quote-a quote-b" aria-live="polite">Enter both quotes to compare them.</output>
+      </form>
+      <noscript><p>To compare quotes, subtract the lower amount from the higher amount. Include the same services in both amounts.</p></noscript>
+    </section>
+    <section id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">KakoBuy spreadsheet FAQ</h2>
+      <details>
+        <summary>Is this an official KakoBuy catalog?</summary>
+        <p>This is an independent shopping guide. The catalog rows come from CAFANS. Open the product listing to review available buying options.</p>
+      </details>
+      <details>
+        <summary>What does the USD price include?</summary>
+        <p>It is an estimated item price from CAFANS. Confirm the current product price with the selected agent and check domestic delivery, international shipping and any other charges before paying.</p>
+      </details>
+      <details>
+        <summary>What if my size is missing or the product link changes?</summary>
+        <p>Check the seller’s current listing for the exact variant. If it is unavailable, use the CAFANS catalog to find another listing and compare its size chart, price and return terms.</p>
+      </details>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap"><p>Independent KakoBuy shopping guide. Product catalog source: <a href="https://cafans.com">CAFANS</a>.</p></div>
+  </footer>
+  <script>
+    const filters = document.getElementById('filters');
+    const query = document.getElementById('query');
+    const category = document.getElementById('category');
+    const rows = Array.from(document.querySelectorAll('#products tr'));
+    const count = document.getElementById('count');
+
+    function updateCatalog() {
+      const term = query.value.trim().toLowerCase();
+      let visible = 0;
+      for (const row of rows) {
+        const name = row.querySelector('th').textContent.toLowerCase();
+        const matchesCategory = !category.value || row.dataset.category === category.value;
+        row.hidden = !matchesCategory || !name.includes(term);
+        if (!row.hidden) visible += 1;
+      }
+      count.textContent = visible ? `${visible} of ${rows.length} listings` : 'No listings match. Try another search or category.';
+    }
+
+    filters.hidden = false;
+    query.addEventListener('input', updateCatalog);
+    category.addEventListener('change', updateCatalog);
+    updateCatalog();
+
+    const comparison = document.getElementById('comparison');
+    const quoteA = document.getElementById('quote-a');
+    const quoteB = document.getElementById('quote-b');
+    const difference = document.getElementById('difference');
+    const usd = new Intl.NumberFormat('en-US', {style:'currency', currency:'USD'});
+
+    function compareQuotes() {
+      if (!quoteA.validity.valid || !quoteB.validity.valid ||
+          !Number.isFinite(quoteA.valueAsNumber) || !Number.isFinite(quoteB.valueAsNumber)) {
+        difference.textContent = 'Enter two valid quotes in USD.';
+        return;
+      }
+      const delta = Math.round(quoteA.valueAsNumber * 100) - Math.round(quoteB.valueAsNumber * 100);
+      if (delta === 0) {
+        difference.textContent = 'Both shipping quotes are the same.';
+        return;
+      }
+      const lower = delta < 0 ? 'A' : 'B';
+      difference.textContent = `Line ${lower} is ${usd.format(Math.abs(delta) / 100)} cheaper on the entered quotes.`;
+    }
+
+    comparison.hidden = false;
+    comparison.addEventListener('input', compareQuotes);
+    comparison.addEventListener('submit', event => {
+      event.preventDefault();
+      compareQuotes();
+    });
+  </script>
+  <style>[hidden]{display:none!important}</style>
+</body>
+</html>
